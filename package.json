@@ -26,8 +26,7 @@
     "prod": "vite build --config /dev/null",
     "build": "tsc --noEmit && vite build",
     "version": "yarn build",
-    "test": "BABEL_ENV=test jest",
-    "np": "np --no-2fa"
+    "np": "np --no-2fa --no-test"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
@@ -36,10 +35,7 @@
     "@babel/preset-typescript": "^7.13.0",
     "@testing-library/dom": "^7.30.4",
     "@types/google.maps": "^3.44.4",
-    "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
-    "babel-jest": "^26.6.3",
-    "jest": "^26.6.3",
     "mutationobserver-shim": "^0.3.7",
     "np": "^7.5.0",
     "prettier-standard": "16.4.1",
@@ -49,10 +45,5 @@
   },
   "peerDependencies": {
     "stimulus": "^2.0.0"
-  },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/jest/jest-setup.js"
-    ]
   }
 }

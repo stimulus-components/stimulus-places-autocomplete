@@ -1,7 +1,5 @@
 .github
-jest
 .babelrc
-jest.config.js
 index.html
 netlify.toml
 .node-version
