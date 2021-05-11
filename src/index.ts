@@ -46,12 +46,6 @@ export default class extends Controller {
   initAutocomplete (): void {
     this.autocomplete = new google.maps.places.Autocomplete(this.addressTarget, this.autocompleteOptions)
 
-    google.maps.event.addDomListener(this.addressTarget, 'keydown', (event: KeyboardEvent) => {
-      if (event.code === 'Enter') {
-        event.preventDefault()
-      }
-    })
-
     this.autocomplete.addListener('place_changed', this.placeChanged)
   }
 
@@ -79,6 +73,12 @@ export default class extends Controller {
   get autocompleteOptions (): google.maps.places.AutocompleteOptions {
     return {
       fields: ['address_components']
+    }
+  }
+
+  preventSubmit (event: KeyboardEvent): void {
+    if (event.code === 'Enter') {
+      event.preventDefault()
     }
   }
 
