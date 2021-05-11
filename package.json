@@ -1,0 +1,58 @@
+{
+  "name": "stimulus-places-autocomplete",
+  "version": "0.0.0",
+  "description": "A Stimulus controller for Google Places Autocomplete.",
+  "keywords": [
+    "stimulus",
+    "stimulusjs",
+    "stimulus controller",
+    "google maps",
+    "google places autocomplete"
+  ],
+  "repository": "git@github.com:stimulus-components/stimulus-places-autocomplete.git",
+  "bugs": {
+    "url": "https://github.com/stimulus-components/stimulus-places-autocomplete/issues"
+  },
+  "author": "Guillaume Briday <guillaumebriday@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/stimulus-components/stimulus-places-autocomplete",
+  "private": false,
+  "main": "dist/stimulus-places-autocomplete.umd.js",
+  "module": "dist/stimulus-places-autocomplete.es.js",
+  "scripts": {
+    "format": "prettier-standard  '**/*.{ts,css,html}' --format",
+    "lint": "prettier-standard  '**/*.{ts,css,html}' --lint",
+    "dev": "vite",
+    "prod": "vite build --config /dev/null",
+    "build": "tsc --noEmit && vite build",
+    "version": "yarn build",
+    "test": "BABEL_ENV=test jest",
+    "np": "np --no-2fa"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-typescript": "^7.13.0",
+    "@testing-library/dom": "^7.30.4",
+    "@types/google.maps": "^3.44.4",
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "mutationobserver-shim": "^0.3.7",
+    "np": "^7.5.0",
+    "prettier-standard": "16.4.1",
+    "stimulus": "^2.0.0",
+    "typescript": "^4.2.4",
+    "vite": "^2.2.4"
+  },
+  "peerDependencies": {
+    "stimulus": "^2.0.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/jest/jest-setup.js"
+    ]
+  }
+}

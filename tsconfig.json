@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "es6"],
+    "types": ["vite/client", "jest", "google.maps"],
+    "skipLibCheck": true,
+    "target": "es6",
+    "moduleResolution": "node"
+  }
+}
