@@ -22,6 +22,8 @@ export default class extends Controller {
   stateTarget: HTMLInputElement
   countryTarget: HTMLInputElement
   postalCodeTarget: HTMLInputElement
+  longitudeTarget: HTMLInputElement
+  latitudeTarget: HTMLInputElement
 
   hasStreetNumberTarget: boolean
   hasRouteTarget: boolean
@@ -30,8 +32,21 @@ export default class extends Controller {
   hasCountyTarget: boolean
   hasPostalCodeTarget: boolean
   hasStateTarget: boolean
+  hasLongitudeTarget: boolean
+  hasLatitudeTarget: boolean
 
-  static targets = ['address', 'city', 'streetNumber', 'route', 'postalCode', 'country', 'county', 'state']
+  static targets = [
+    'address',
+    'city',
+    'streetNumber',
+    'route',
+    'postalCode',
+    'country',
+    'county',
+    'state',
+    'longitude',
+    'latitude'
+  ]
 
   initialize (): void {
     this.placeChanged = this.placeChanged.bind(this)
@@ -58,6 +73,10 @@ export default class extends Controller {
 
       this.setAddressComponents(formattedAddress)
     }
+
+    if (this.place.geometry !== undefined) {
+      this.setGeometry(this.place.geometry)
+    }
   }
 
   setAddressComponents (address: Address): void {
@@ -70,9 +89,14 @@ export default class extends Controller {
     if (this.hasPostalCodeTarget) this.postalCodeTarget.value = address.postal_code
   }
 
+  setGeometry (geometry: google.maps.places.PlaceGeometry): void {
+    if (this.hasLongitudeTarget) this.longitudeTarget.value = geometry.location.lng().toString()
+    if (this.hasLatitudeTarget) this.latitudeTarget.value = geometry.location.lat().toString()
+  }
+
   get autocompleteOptions (): google.maps.places.AutocompleteOptions {
     return {
-      fields: ['address_components']
+      fields: ['address_components', 'geometry']
     }
   }
 
