@@ -35,6 +35,8 @@ export default class extends Controller {
   hasLongitudeTarget: boolean
   hasLatitudeTarget: boolean
 
+  countryValue: Array<string>
+
   static targets = [
     'address',
     'city',
@@ -47,6 +49,10 @@ export default class extends Controller {
     'longitude',
     'latitude'
   ]
+
+  static values = {
+    country: Array
+  }
 
   initialize (): void {
     this.placeChanged = this.placeChanged.bind(this)
@@ -96,7 +102,10 @@ export default class extends Controller {
 
   get autocompleteOptions (): google.maps.places.AutocompleteOptions {
     return {
-      fields: ['address_components', 'geometry']
+      fields: ['address_components', 'geometry'],
+      componentRestrictions: {
+        country: this.countryValue
+      }
     }
   }
 
