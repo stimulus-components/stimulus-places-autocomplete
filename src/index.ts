@@ -80,13 +80,13 @@ export default class extends Controller {
   }
 
   setAddressComponents (address: Address): void {
-    if (this.hasStreetNumberTarget) this.streetNumberTarget.value = address.street_number
-    if (this.hasRouteTarget) this.routeTarget.value = address.route
-    if (this.hasCityTarget) this.cityTarget.value = address.locality
-    if (this.hasCountyTarget) this.countyTarget.value = address.administrative_area_level_2
-    if (this.hasStateTarget) this.stateTarget.value = address.administrative_area_level_1
-    if (this.hasCountryTarget) this.countryTarget.value = address.country
-    if (this.hasPostalCodeTarget) this.postalCodeTarget.value = address.postal_code
+    if (this.hasStreetNumberTarget) this.streetNumberTarget.value = address.street_number || ''
+    if (this.hasRouteTarget) this.routeTarget.value = address.route || ''
+    if (this.hasCityTarget) this.cityTarget.value = address.locality || ''
+    if (this.hasCountyTarget) this.countyTarget.value = address.administrative_area_level_2 || ''
+    if (this.hasStateTarget) this.stateTarget.value = address.administrative_area_level_1 || ''
+    if (this.hasCountryTarget) this.countryTarget.value = address.country || ''
+    if (this.hasPostalCodeTarget) this.postalCodeTarget.value = address.postal_code || ''
   }
 
   setGeometry (geometry: google.maps.places.PlaceGeometry): void {

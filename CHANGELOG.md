@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Reset fields if address type is undefined.
+
 ## [0.3.0] - 2021-05-21
 
 ### Added
