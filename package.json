@@ -44,6 +44,6 @@
     "vite": "^2.2.4"
   },
   "peerDependencies": {
-    "stimulus": "^2.0.0"
+    "stimulus": "^3.0.0"
   }
 }
