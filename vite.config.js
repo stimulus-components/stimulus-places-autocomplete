@@ -7,10 +7,10 @@ module.exports = {
       name: 'stimulus-places-autocomplete'
     },
     rollupOptions: {
-      external: ['stimulus'],
+      external: ['@hotwired/stimulus'],
       output: {
         globals: {
-          stimulus: 'Stimulus'
+          '@hotwired/stimulus': 'Stimulus'
         }
       }
     }
