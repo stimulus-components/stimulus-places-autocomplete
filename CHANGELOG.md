@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2022-05-02
+
+### Chore
+
+- **Breaking** Upgrading `Stimulus` to 3.x and change namespace from `stimulus` to `@hotwired/stimulus`.
+- Upgrading dependencies
+- Upgrading Node to 16
+
+
+## [0.4.0] - 2021-05-25
+
 ### Added
 
 - Adding country restriction support.
