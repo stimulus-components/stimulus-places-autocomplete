@@ -4,7 +4,7 @@
 [![](https://img.shields.io/npm/v/stimulus-places-autocomplete.svg)](https://www.npmjs.com/package/stimulus-places-autocomplete)
 [![](https://github.com/stimulus-components/stimulus-places-autocomplete/workflows/Lint/badge.svg)](https://github.com/stimulus-components/stimulus-places-autocomplete)
 [![](https://img.shields.io/github/license/stimulus-components/stimulus-places-autocomplete.svg)](https://github.com/stimulus-components/stimulus-places-autocomplete)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5454560c-391d-41f8-92e1-8a3ee026dbe1/deploy-status)](https://stimulus-places-autocomplete.netlify.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5454560c-391d-41f8-92e1-8a3ee026dbe1/deploy-status)](https://stimulus-places-autocomplete.stimulus-components.com/)
 
 ## Getting started
 
@@ -12,7 +12,7 @@ A Stimulus controller for Google Places Autocomplete.
 
 ## 📚 Documentation
 
-See [stimulus-places-autocomplete documentation](https://stimulus-components.netlify.app/docs/components/stimulus-places-autocomplete/).
+See [stimulus-places-autocomplete documentation](https://www.stimulus-components.com/docs/stimulus-places-autocomplete/).
 
 ## 👷‍♂️ Contributing
 
