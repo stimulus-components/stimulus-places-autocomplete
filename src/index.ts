@@ -8,6 +8,13 @@ interface Address {
   administrative_area_level_1: string
   country: string
   postal_code: string
+  formatted_address: string
+  street_address: string
+  locality: string
+  sublocality: string
+  neighborhood: string
+  political: string
+
 }
 
 export default class extends Controller {
@@ -22,6 +29,12 @@ export default class extends Controller {
   stateTarget: HTMLInputElement
   countryTarget: HTMLInputElement
   postalCodeTarget: HTMLInputElement
+  formattedAddressTarget: HTMLInputElement
+  streetAddressTarget: HTMLInputElement
+  localityTarget: HTMLInputElement
+  sublocalityTarget: HTMLInputElement
+  neighborhoodTarget: HTMLInputElement
+  politicalTarget: HTMLInputElement
   longitudeTarget: HTMLInputElement
   latitudeTarget: HTMLInputElement
 
@@ -32,6 +45,12 @@ export default class extends Controller {
   hasCountyTarget: boolean
   hasPostalCodeTarget: boolean
   hasStateTarget: boolean
+  hasFormattedAddressTarget: boolean
+  hasStreetAddressTarget: boolean
+  hasLocalityTarget: boolean
+  hasSublocalityTarget: boolean
+  hasNeighborhoodTarget: boolean
+  hasPoliticalTarget: boolean
   hasLongitudeTarget: boolean
   hasLatitudeTarget: boolean
 
@@ -46,8 +65,15 @@ export default class extends Controller {
     'country',
     'county',
     'state',
+    'formatted_address',
+    'street_address',
+    'locality',
+    'sublocality',
+    'neighborhood',
+    'political'
     'longitude',
-    'latitude'
+    'latitude',
+
   ]
 
   static values = {
@@ -93,6 +119,12 @@ export default class extends Controller {
     if (this.hasStateTarget) this.stateTarget.value = address.administrative_area_level_1 || ''
     if (this.hasCountryTarget) this.countryTarget.value = address.country || ''
     if (this.hasPostalCodeTarget) this.postalCodeTarget.value = address.postal_code || ''
+    if (this.hasFormattedAddressTarget) this.formattedAddressTarget.value = address.formatted_address || ''
+    if (this.hasStreetAddressTarget) this.streetAddressTarget.value = address.street_address || ''
+    if (this.hasLocalityTarget) this.localityTarget.value = address.locality || ''
+    if (this.hasSublocalityTarget) this.sublocalityTarget.value = address.sublocality || ''
+    if (this.hasNeighborhoodTarget) this.neighborhoodTarget.value = address.neighborhood || ''
+    if (this.hasPoliticalTarget) this.politicalTarget.value = address.political || ''
   }
 
   setGeometry (geometry: google.maps.places.PlaceGeometry): void {
